@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <!-- <link rel="stylesheet" href="css/index.css"> -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <title>testBT</title>
+    </head>
+    <body>
+        <div id="dot" class="dot dot_blink"></div>
+        <header id="headerMenu">
+
+        </header>
+        
+        <main role="main">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12"><br></div>
+                    <div class="col-12">
+                        <ul class="list-group" id="myList">
+                            <li class="list-group-item list-group-item-dark text-center border border-dark font-weight-bold text-white ">Devices</li>
+                            
+                            <!-- These is for testing purposes only -->
+
+                             <li class="list-group-item border border-dark font-weight-bold">Dapibus ac facilisis in</li>
+                            <li class="list-group-item border border-dark font-weight-bold" remove>Dapibus ac facilisis in 2</li>
+                            <li class="list-group-item border border-dark font-weight-bold">Dapibus ac facilisis in</li>
+                            <!--<li class="list-group-item border border-dark font-weight-bold">Dapibus ac facilisis in</li>
+                            <li class="list-group-item border border-dark font-weight-bold">Dapibus ac facilisis in</li>
+                            <li class="list-group-item border border-dark font-weight-bold">Dapibus ac facilisis in</li>
+                            <li class="list-group-item border border-dark font-weight-bold">Dapibus ac facilisis in</li>
+                            <li class="list-group-item border border-dark font-weight-bold">Dapibus ac facilisis in</li>
+                            <li class="list-group-item border border-dark font-weight-bold">Dapibus ac facilisis in</li>
+                            <li class="list-group-item border border-dark font-weight-bold">Dapibus ac facilisis in</li>
+                            <li class="list-group-item border border-dark font-weight-bold">Dapibus ac facilisis in</li>
+                            <li class="list-group-item border border-dark font-weight-bold">Dapibus ac facilisis in</li>
+                            <li class="list-group-item border border-dark font-weight-bold">Dapibus ac facilisis in</li>
+                            <li class="list-group-item border border-dark font-weight-bold">Dapibus ac facilisis in</li>
+                            <li class="list-group-item border border-dark font-weight-bold">Dapibus ac facilisis in</li> -->
+
+                        </ul>
+
+                        <div id="loader" class="loader" style="visibility: hidden;"></div>
+
+                    </div>
+                    <div class="col-12"><br></div>
+                    <div class="col-12"><br></div>
+                    <div class="col-12"><br></div>
+                </div>
+                <div class="row justify-content-center fixed-bottom">
+                        <button id = "scan" type="button" class="btn btn-pink mx-auto"><strong>SCAN</strong></button>
+                        <!-- <button id = "startScan">start scan</button>
+                        <button id = "refresh">start refresh</button>
+                        <button id = "bonded">get bonded devices</button> -->
+                    <div class="col-12"><br></div>
+                </div>
+            </div>
+        </main>
+        <script src="cordova.js"></script>
+        <script src="js/BTconnection.js"></script>
+        <script src="js/menu.js"></script>
+        <script src="js/btEasy.js"></script>
+    </body>
+</html>
