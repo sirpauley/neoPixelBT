@@ -1,3 +1,6 @@
+# neoPixelBT
+Mobile app created in cordova to control NeoPixel leds through Bluetooth
+
 just notes for me
 
 Start blog item with
