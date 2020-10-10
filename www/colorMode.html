@@ -9,7 +9,7 @@
         <meta name="color-scheme" content="light dark">
         <!-- <link rel="stylesheet" href="css/index.css"> -->
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <title>Color wheel</title>
+        <title>Color mode</title>
     </head>
     <body>
         <div id="dot" class="dot dot_blink"></div>
@@ -17,41 +17,30 @@
             
         </header>
         
-        <main role="main" id="main">
+        <main role="main">
             <div class="container">
                 <div class="app row justify-content-center">
+                    <div class="col-12"><br></div>
                     <div class="col-12">
-                        
-                        <canvas id="picker"></canvas>
-
-                        <div id="inputColor" class="input-group mb-3" style="display: none;">
-                            <input id="color" value="#54aedb" class="btn mx-auto">
-                        </div>
+                        <h4>Current mode selected:</h4>
                     </div>
+                    <div class="col-12">
+                        <h4 id="currentModeSelected" class="text-secondary"></h4>
+                    </div>
+                </div>
 
+                <div class="row justify-content-center fixed-bottom">
+                    <button id = "selectMode" type="button" class="btn btn-pink mx-auto"><strong>Select mode</strong></button>
+                <div class="col-12"><br></div>
                 </div>
 
             </div>
         </main>
 
-        <div class="fixed-bottom">
-            <div class="col-12">
-                <div class="input-group mb-3">
-                    <button id = "send" type="button" class="btn btn-pink mx-auto"><strong>Set Color</strong></button>
-                </div>
-            </div>
-        </div>
-
         <script src="cordova.js"></script>
-        
-        <!-- <script src="js/sendColor.js"></script> -->
-
-        <script src="js/html5kellycolorpicker.min.js"></script>
-
+        <script src="js/colorMode.js"></script>
         <script src="js/menu.js"></script>
         <script src="js/btEasy.js"></script>
-        <script src="js/colorWheel.js"></script>
         <script src="js/colorsEasy.js"></script>
-        
     </body>
 </html>

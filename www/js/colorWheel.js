@@ -66,16 +66,16 @@ function wheelColorChanged() {
     red = rgbArr[0];
     green = rgbArr[1];
     blue = rgbArr[2];
-
-    console.log("[colorWheel]", "colorRGB", colorRGB);
-    console.log("[colorWheel]", "colorRGB2", rgbArr);
-    console.log("[colorWheel]", "colorR", red);
-    console.log("[colorWheel]", "colorG", green);
-    console.log("[colorWheel]", "colorB", blue);
+    colorMode = getColorMode();
+    // console.log("[colorWheel]", "colorRGB", colorRGB);
+    // console.log("[colorWheel]", "colorRGB2", rgbArr);
+    // console.log("[colorWheel]", "colorR", red);
+    // console.log("[colorWheel]", "colorG", green);
+    // console.log("[colorWheel]", "colorB", blue);
     // document.getElementById("color").style.color = `rgb(${red}, ${green}, ${blue})`;
     // document.getElementById("color").style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
 
-    updateRGB(red, green, blue);
+    updateRGB(red, green, blue, colorMode);
 
 }
 

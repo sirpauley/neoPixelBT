@@ -32,4 +32,34 @@ function onDeviceReady() {
 
     // test if BT is connected
     isBtConnected();
+    //try to reconnect to last device
+    connectToPreviouslyKnowDevice();
+}
+
+function connectToPreviouslyKnowDevice(){
+    bluetoothSerial.enable(
+        function() {
+            btMacAddress = localStorage.getItem("btDeviceMacAddress");
+            
+            if(btMacAddress != null){
+                bluetoothSerial.connectInsecure(btMacAddress, connectSuccess, connectFailure);
+            } else {
+                console.log("[index]", "no PreviouslyKnowDevice devices in history.");
+            }
+
+            console.log("[index]", "Bluetooth is enabled");
+        },
+        function() {
+            dialogAlert("Please turn on Bluetooth");
+            console.log("[index]", "The user did *not* enable Bluetooth");
+        }
+    );
+}
+
+function connectSuccess(){
+    isBtConnected();
+}
+
+function connectFailure(){
+    console.log("[index]", "Failed to reconnect to PreviouslyKnowDevice!");
 }

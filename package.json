@@ -17,13 +17,15 @@
     "cordova-browser": "^6.0.0",
     "cordova-plugin-bluetooth-serial": "^0.4.7",
     "cordova-plugin-dialogs": "^2.0.2",
+    "cordova-plugin-listpicker": "^2.2.2",
     "cordova-plugin-whitelist": "^1.3.4"
   },
   "cordova": {
     "plugins": {
       "cordova-plugin-whitelist": {},
       "cordova-plugin-bluetooth-serial": {},
-      "cordova-plugin-dialogs": {}
+      "cordova-plugin-dialogs": {},
+      "cordova-plugin-listpicker": {}
     },
     "platforms": [
       "browser",

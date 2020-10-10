@@ -1,1 +1,1 @@
-{"plugins":["cordova-plugin-whitelist","cordova-plugin-bluetooth-serial"]}
+{"plugins":["cordova-plugin-whitelist","cordova-plugin-bluetooth-serial","cordova-plugin-dialogs"]}

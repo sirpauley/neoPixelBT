@@ -2868,6 +2868,49 @@ fieldset:disabled a.btn {
 .show>.btn-danger.dropdown-toggle:focus {
 	box-shadow: 0 0 0 .2rem rgba(220, 53, 69, .5)
 }
+
+.btn-greenish {
+	color: #fff;
+	background-color: #1cff00  ;
+	border-color: #1cff00 ;
+	font-weight: bold;	
+}
+
+.btn-greenish:hover {
+	color: #fff;
+	background-color: #1cff00 ;
+	border-color: #1cff00 ;
+	font-weight: bold;	
+}
+
+.btn-greenish.focus,
+.btn-greenish:focus {
+	box-shadow: 0 0 0 .2rem rgba(28, 255, 0, .5)
+}
+
+.btn-greenish.disabled,
+.btn-greenish:disabled {
+	color: #fff;
+	background-color: #1cff00 ;
+	border-color: #1cff00 ;
+	font-weight: bold;	
+}
+
+.btn-greenish:not(:disabled):not(.disabled).active,
+.btn-greenish:not(:disabled):not(.disabled):active,
+.show>.btn-danger.dropdown-toggle {
+	color: #fff;
+	background-color: #1cff00 ;
+	border-color: #1cff00 ;
+	font-weight: bold;	
+}
+
+.btn-greenish:not(:disabled):not(.disabled).active:focus,
+.btn-greenish:not(:disabled):not(.disabled):active:focus,
+.show>.btn-danger.dropdown-toggle:focus {
+	box-shadow: 0 0 0 .2rem rgba(28, 255, 0, .5)
+}
+
 /*  */
 
 .btn-danger {

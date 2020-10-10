@@ -29,12 +29,13 @@ function onDeviceReady() {
   //startScan 
   document.getElementById('scan').addEventListener("click", scan);
 
-
   /*
   * method needed for this screen
   */
   //Create menu dynamically
   createMenu();
+
+  isBtTurnedOn();
 
   // test if BT is connected
   isBtConnected();
@@ -42,6 +43,19 @@ function onDeviceReady() {
   //local storage
   var localStorage = window.localStorage; 
 
+}
+
+function isBtTurnedOn(){
+  bluetoothSerial.enable(
+    function() {
+        console.log("[BTconnection]", "Bluetooth is enabled");
+
+    },
+    function() {
+        dialogAlert("Please turn on Bluetooth");
+        console.log("[BTconnection]", "The user did *not* enable Bluetooth");
+    }
+);
 }
 
 //Functions

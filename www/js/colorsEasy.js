@@ -9,6 +9,7 @@ function onDeviceReady() {
     var BLUE = 0;
     var rgbStringToSend = '[{"red":0,"green":0,"blue":0,}]';
     var colorHex = "000000"; //without the #
+    var colorMode = "";
 
     // local storage
     var localStorage = window.localStorage; 
@@ -32,22 +33,32 @@ function setupVars(){
         if(localStorage.getItem("colorHex") !== null){
             colorHex = localStorage.getItem("colorHex");
         }
+        if(localStorage.getItem("mode") !== null){
+            colorMode = localStorage.getItem("mode");
+        }else{
+            colorMode = "solid";
+            localStorage.setItem("mode", colorMode);
+        }
     }
 }
 
 function updateRed(redValue){
-    updateRGB(redValue, GREEN, BLUE);
+    updateRGB(redValue, GREEN, BLUE, colorMode);
 }
 
 function updateGreen(greenValue){
-    updateRGB(RED, greenValue, BLUE);
+    updateRGB(RED, greenValue, BLUE, colorMode);
 }
 
 function updateBlue(blueValue){
-    updateRGB(RED, GREEN, blueValue);
+    updateRGB(RED, GREEN, blueValue, colorMode);
 }
 
-function updateRGB(red=0, green=0, blue=0){
+function updateColorMode(colorModeChange){
+    updateRGB(RED, GREEN, BLUE, colorModeChange);
+}
+
+function updateRGB(red=0, green=0, blue=0, colorModeChange="solid"){
     
     if(red !== RED)
         printChangedColor("RED", red);
@@ -58,10 +69,14 @@ function updateRGB(red=0, green=0, blue=0){
     if(blue !== BLUE)
         printChangedColor("BLUE", blue);
 
+    if(colorModeChange !== colorMode)
+        printChangedColor("colorMode", colorModeChange);
+
     RED = red;
     GREEN = green;
     BLUE = blue;
-    rgbStringToSend = myOwnTypeOfStringify(RED, GREEN, BLUE);
+    colorMode = colorModeChange;
+    rgbStringToSend = myOwnTypeOfStringify(RED, GREEN, BLUE, colorMode);
     colorHex = fullColorHex(RED, GREEN, BLUE);
 
     localStorage.setItem("RED", RED);
@@ -69,18 +84,16 @@ function updateRGB(red=0, green=0, blue=0){
     localStorage.setItem("BLUE", BLUE);
     localStorage.setItem("rgbStringToSend", rgbStringToSend);
     localStorage.setItem("colorHex", colorHex);
+    localStorage.setItem("mode", colorMode);//mode
 
 }
 
-// setLocalStorage = function(){
-    
-// }
 
 //this function creates string for sending to BT devices
 //format currently is as follows
-//['{"red":RED,"green":GREEN,"blue":BLUE,}]'
-function myOwnTypeOfStringify(red, green, blue){
-    colorsString = `[{"red":${red},"green":${green},"blue":${blue},}]`;
+//['{"red":RED,"green":GREEN,"blue":BLUE,"mode":colorMode,}]'
+function myOwnTypeOfStringify(red, green, blue, colorMode){
+    colorsString = `{"red":${red},"green":${green},"blue":${blue},"mode":"${colorMode}",}`;
     // console.log("[colorEasy]", colorsString);
     return colorsString; //in string format
 }
@@ -113,3 +126,7 @@ var fullColorHex = function(r,g,b) {
     var blue = rgbToHex(b);
     return red+green+blue;
 };
+
+function getColorMode(){
+    return colorMode;
+}
