@@ -1,5 +1,5 @@
 # neoPixelBT
-Mobile app created in cordova to control NeoPixel leds through Bluetooth.
+Mobile app created in Cordova to control NeoPixel LEDs through Bluetooth.
 
 ``` I started this project to fulfill a life long dream... ```
 
@@ -10,7 +10,8 @@ This App runs hand-in-hand with my [ESP32NeoPixelControl](https://github.com/sir
 ## Using this APP on android
 * find the [apk](/DemoAPK/)
 * Install it on your android device
-* This project was develop with Andorid and IOS in mind Please note I have not tested or build this app for IOS yet(lack of access to a MAC)
+* This project was developed with Android and IOS in mind 
+* Please note I have not tested or built this app for IOS yet(lack of access to a MAC)
 
 # Screenshots of the app
 
@@ -18,18 +19,18 @@ This App runs hand-in-hand with my [ESP32NeoPixelControl](https://github.com/sir
 |:-----------:|:-------:|:---------------:|:-----:|
 | <img src="readme/1-landing.png" alt="drawing" width="100"/> | <img src="readme/2-main.png" alt="drawing" width="100"/> | <img src="readme/3-mainStatus.png" alt="drawing" width="100"/> | <img src="readme/4-menu.png" alt="drawing" width="100"/> |
 
-| Connection screen | Searching permission | Searching | Device found | connection is successfull | Connected status |
+| Connection screen | Searching permission | Searching | Device found | connection is successful | Connected status |
 |:-----------------:|:--------------------:|:---------:|:------------:|:------------------------:|:----------------:|
 | <img src="readme/5-ConnectionScreen.png" alt="drawing" width="100"/> | <img src="readme/6-ConnectionScreenPermisionWhenSearching.png" alt="drawing" width="100"/> | <img src="readme/loadingDemo.gif" alt="drawing" width="100"/> | <img src="readme/7-DevicesFound.png" alt="drawing" width="100"/> | <img src="readme/8-DeviceConnected.png" alt="drawing" width="100"/> | <img src="readme/9-StatusBarChanged.png" alt="drawing" width="100"/> |
 
-| ColorWheel | Modes selection screen | Selecting a diffrent mode |
+| ColorWheel | Modes selection screen | Selecting a different mode |
 |:----------:|:----------------------:|:-------------------------:|
  <img src="readme/10-ColorWheel.png" alt="drawing" width="100"/> | <img src="readme/11-Mode.png" alt="drawing" width="100"/> | <img src="readme/12-ModeMenuOpen.png" alt="drawing" width="100"/> |
 
-## few intresting facts (Things I learned)
+## few interesting facts (Things I learned)
 * for 1 I created a dynamic menu. Built according to a JSON object
-* I discovered it is possible to use Bootstrap inside Cordova framework, It helps with screen designs
-* When you reopen the App it tries to connect to previous know device
+* I discovered it is possible to use Bootstrap inside the Cordova framework, It helps with screen designs
+* When you reopen the App it tries to connect to a previous know device
 
 # Features
 * Connect to Low Energy Bluetooth like ESP32
@@ -58,7 +59,7 @@ See [ESP32NeoPixelControl](https://github.com/sirpauley/ESP32NeoPixelControl) fo
 ## Giving credit
 * [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
 * [cordova-plugin-listpicker](https://github.com/roberthovhannisyan/PhoneGap-Plugin-ListPicker)
-* [Tutorial Point](https://www.tutorialspoint.com/cordova/index.htm) for an easy explination of how Cordova works
+* [Tutorial Point](https://www.tutorialspoint.com/cordova/index.htm) for an easy explanation of how Cordova works
 * [Bluetooth Library](https://github.com/don/BluetoothSerial) for cordova  Done by [Don](https://github.com/don), Thank you 
 
 ## TO-DO
