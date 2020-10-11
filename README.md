@@ -29,7 +29,7 @@ This App runs hand-in-hand with my [ESP32NeoPixelControl](https://github.com/sir
 ## few intresting facts (Things I learned)
 * for 1 I created a dynamic menu. Built according to a JSON object
 * I discovered it is possible to use Bootstrap inside Cordova framework, It helps with screen designs
-* When you reopen the App it tries to connect to device previous know device
+* When you reopen the App it tries to connect to previous know device
 
 # Features
 * Connect to Low Energy Bluetooth like ESP32
