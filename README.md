@@ -8,7 +8,7 @@ Mobile app created in cordova to control NeoPixel leds through Bluetooth.
 This App runs hand-in-hand with my [ESP32NeoPixelControl](https://github.com/sirpauley/ESP32NeoPixelControl)
 
 ## Using this APP on android
-* find the [apk](../DemoAPK/)
+* find the [apk](/DemoAPK/)
 * Install it on your android device
 * This project was develop with Andorid and IOS in mind Please note I have not tested or build this app for IOS yet(lack of access to a MAC)
 
