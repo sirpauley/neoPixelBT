@@ -42,6 +42,18 @@ This App runs hand-in-hand with my [ESP32NeoPixelControl](https://github.com/sir
     * cordova-plugin-dialogs 2.0.2 "Notification"
     * cordova-plugin-listpicker 2.2.2 "ListPicker"
     * cordova-plugin-whitelist 1.3.4 "Whitelist"
+* What this app does it gives you a friendly interface to chose color and mode and compile it into a JSON object to send to the ESP32
+Example: 
+
+```
+{
+    "red":255,
+    "green":255,
+    "blue":255,
+    "mode":"solid",
+}
+```
+See [ESP32NeoPixelControl](https://github.com/sirpauley/ESP32NeoPixelControl) for explenation on the modes
 
 ## Giving credit
 * [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
