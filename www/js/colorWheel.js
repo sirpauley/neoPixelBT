@@ -40,6 +40,21 @@ function onDeviceReady() {
     var localStorage = window.localStorage;
     if (localStorage !== null && localStorage.getItem("colorHex") !== null) {
         startColorWheel(localStorage.getItem("colorHex"));
+    } else {
+        //seting default color if none exists
+        var initR = 255; 
+        var initB = 0;
+        var initG = 255;
+        var initHex = "ff00ff";
+        var initMode = "solid";
+        localStorage.setItem("RED", initR);
+        localStorage.setItem("GREEN", initB);
+        localStorage.setItem("BLUE", initG);
+        localStorage.setItem("rgbStringToSend", myOwnTypeOfStringify(initR, initB, initG, initMode));
+        localStorage.setItem("colorHex", initHex);
+        localStorage.setItem("colorMode", initMode); 
+
+        startColorWheel(localStorage.getItem("colorHex"));
     }
     setupVars();
 
